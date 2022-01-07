@@ -8,8 +8,7 @@ script:
   - script/test
   - go build
   - npm install -g @datadog/datadog-ci
-  - DATADOG_API_KEY=<key> DATADOG_SITE=datadoghq.com datadog-ci trace \
-
+  
 notifications:
   email: false
   slack: false
