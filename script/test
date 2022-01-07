@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -e
+
+diff -u <(echo -n) <(gofmt -d -s .) 2>&1
+echo "ok gofmt"
+
+go vet ./...
+echo "ok go vet"
+
+go test -race ./... -cover
+echo "ok go test"
+
+exit 0
